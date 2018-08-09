@@ -1,0 +1,50 @@
+Prompts to Get Started Analyzing the Data:
+Background:
+ An A/B test that included all the customers who joined as ‘trialers’ on 5/5 was launched in May
+(for one day) as part of an initiative meant to drive customer and business outcomes.
+Specifically:
+o Customers should be better able to complete the “getting started” workflow which
+consists of 3 distinct tasks (in series) and by doing so set themselves up for success in
+the weeks, months and years to come.
+o This success should then drive customer conversion from trial to subscription.
+ As the data scientist on the working team, you are ultimately responsible for determining
+whether the test experience was successful (i.e. better than the default) and for making a
+recommendation to pivot or to make the test experience the default going forward.
+ So what is the test experience? A small widget pops up on the right hand corner of the screen,
+whenever the system is confident that the customer is running into trouble and is likely unable
+to complete a task. The widget reminds the customer that Customer Success (“CS”) channels
+are open to help at the click of a button. This help can come in the form of articles, videos,
+chatbots and calls to an agent. The customer can choose to engage or presumably figure things
+out in another way (e.g. call their accountant, google, etc.)
+ Attached along with this document are 4 datasets you will need to conduct your analysis.
+o Test Cohorts – This contains the customer ids associated with the test, broken out into
+“Test” and “Control”; 30% and 70% respectively.
+o Product Activity – This contains the activity for all customers associated with the critical
+3 tasks (time stamps for when they conduct a particular action). Notice that some
+customers do not even attempt their first task.
+o Help Activity – This contains the activity for all customers who were identified as
+needing help by the system, when it happened and their choice of help channel. Notice
+that some will not choose Customer Success (CS) and will opt to figure it out on their
+own (OTHER).
+o Conversion – This contains the conversion outcomes for all customers. Customers have
+30 days to try out the product but overwhelmingly they make up their minds early on.
+
+Conducting the analysis:
+ Join the datasets as you see fit. Then conduct some exploration and testing of assumptions.
+o A big assumption is that CS is a better option than OTHER when a customer hits a bump
+in the product. Is this true? Are customers more likely to complete when they opt for
+CS? Are they able to complete faster?
+o Another big assumption is that being able to complete all 3 tasks makes someone more
+likely to convert. Is this so? Not only that but is there a relationship between
+completion (number of completions) and conversion that we could tease out?
+o And finally, it makes sense to assume customer success increases with time and with
+experience. Even though this is data for just one day, does this hold true?
+
+ Now conduct an analysis of the success metrics for the test
+o Was the test experience successful in increasing engagement with CS?
+o Was the test experience able to deliver on a higher conversion of customers?
+o Are all of these results statistically significant (&gt;= 95% confidence)?
+
+Recommendation:
+o Should we pivot away from this type of experience or should we double down?
+o Fun question: Is this data “real” (simply anonymized) or is it simulated? How do you know?
